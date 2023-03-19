@@ -20,7 +20,10 @@ function App() {
 
   const [disabled, setDisabled] = useState(false);
 
-  // shuffle cards
+  /**
+   * We take the cardImages array, duplicate it, shuffle it, and then set the state of the cards array
+   * to the shuffled array
+   */
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
@@ -31,8 +34,6 @@ function App() {
     setCards(shuffledCards);
     setTurns(0);
   };
-
-  // compare
 
   useEffect(() => {
     //
